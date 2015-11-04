@@ -35,8 +35,8 @@ RUN alternatives --install /usr/lib/mozilla/plugins/libjavaplugin.so libjavaplug
 ENV ECLIPSE_URL http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/technology/epp/downloads\
 /release/mars/1/eclipse-jee-mars-1-linux-gtk.tar.gz
 RUN wget $ECLIPSE_URL && \
-    tar -zxvf `echo "${ECLIPSE_URL##*/}"` -C /usr/ && \
-    ln -s /usr/eclipse/eclipse /usr/bin/eclipse && \
+    tar -zxvf `echo "${ECLIPSE_URL##*/}"` -C /opt/ && \
+    ln -s /opt/eclipse/eclipse /usr/bin/eclipse && \
     rm -f `echo "${ECLIPSE_URL##*/}"`
 
 # Default user
