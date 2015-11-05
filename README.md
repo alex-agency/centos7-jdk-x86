@@ -1,7 +1,7 @@
 alexagency/centos7-jdk-x86
 ==========================
 
-**Dockerfile for X11 forwarding for Centos 7 JDK 1.8 x86, Firefox x86 and Eclipse x86**
+**Dockerfile for X11 sharing for Centos 7 JDK 1.8 x86, Firefox x86 and Eclipse x86**
 
 ### Installation
 
@@ -28,7 +28,7 @@ cd /Users/<MAC USER>
 cd /c/Users/<WINDOWS USER>
 ```
 
-Run **alexagency/centos7-jdk-x86** container with X11 forwarding from [Docker Hub](https://hub.docker.com/r/alexagency/centos7-jdk-x86):
+Run **alexagency/centos7-jdk-x86** container with X11 sharing from [Docker Hub](https://hub.docker.com/r/alexagency/centos7-jdk-x86) image:
 ```
 xhost +
 docker run -it --rm -e DISPLAY=`hostname --ip-address`$DISPLAY alexagency/centos7-jdk-x86 bash
